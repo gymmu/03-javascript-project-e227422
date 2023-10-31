@@ -59,7 +59,7 @@ return count
 }
 
 
-
+export function aufgabe04(args) {}
 
 
 
