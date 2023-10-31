@@ -63,4 +63,32 @@ export function aufgabe04(args) {}
 
 
 
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+let capitalLetters = 0
+//setzt den counter auf 0.
+
+for (let i = 0; i < input.length; i++) {
+const currentElement = input[i]
+//prüft ob ein Grossbuchstabe enhalten ist.
+if (currentElement=== ".") {}
+else if (currentElement===" "){}
+
+else if (currentElement === currentElement.toUpperCase()) {
+  capitalLetters++
+}
+
+
+
+}
+
+if (capitalLetters > 0) {
+  return true
+} else { return false}
+ 
+}
+
+
+
 
