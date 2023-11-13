@@ -116,7 +116,7 @@ export function aufgabe06(args) {
     const currentElement = input[i]
   }
 
-if ( currentElement.charCodeAt === 33 > 64 ) {return  true}
+if ( currentElement.charCodeAt === 33 > 64 ) {return true}
  
 
 return false
@@ -164,4 +164,17 @@ export function aufgabe12 (args) {
 }
 
 return -1
+}
+export function aufgabe13 (args) {
+  const input = args
+ 
+  for (let i = input.lenght -1; i >= 0; i--) {
+    const currentElement = input[i]
+    res.push(currentElement)
+    if (currentElement=== "e"){
+       return i}
+
+  }
+  
+  return resizeBy.join("")
 }
