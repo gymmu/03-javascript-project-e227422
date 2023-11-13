@@ -111,20 +111,57 @@ if (capitalLetters > 0) {
 export function aufgabe06(args) {
   const input = args
   const result = []
-  const specialCharacters = 0
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   }
-// alle Zeichen werden grossgeschrieben.
-  const capitalizedElement = currentElement.toUpperCase()
 
-result.push(capitalizedElement)
-
-if ( currentElement === capitalizedElement) { specialCharacters++}
-
+if ( currentElement.charCodeAt === 33 > 64 ) {return  true}
  
 
-else { return false}
+return false
   }
 
+
+
+export function aufgabe09(args) {
+  const input = args
+  let len = 0
+  for (let i = 0; i < input.length; i++) {
+  len++
+  }
+
+ if (len === 6) {
+  return true
+ } else {
+  return false
+ }
+}
+
+export function aufgabe11 (args) {
+  const input = args
+  let ascii = null
+if (input.length > 1){ return null} //funtktionswächter
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  ascii = currentElement.charCodeAt(0)
+  return ascii
+}
+return null
+}
+
+export function aufgabe12 (args) {
+  const input = args  
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+
+    if (currentElement === "e") { 
+      return i
+  }
+}
+
+return -1
+}
