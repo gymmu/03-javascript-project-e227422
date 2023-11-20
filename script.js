@@ -202,12 +202,45 @@ export function aufgabe15 (args) {
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
 
-  result.push("")
   
+//falls es ein Leerzeichen findet, bricht es ab und gibt das Resultat zurück.
   if (currentElement === " ") {
     return result.join("")
   }
-  
-}
+  result.push(currentElement)
+}//falls das "if" nicht eintritt, wird das Resultat zurückgegeben.
 return result.join("")
+}
+
+
+
+export function aufgabe18 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+
+
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+}
+
+
+
+
+
+
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+//Das Element wird von umgekehrt durchgelaufen.
+  for (let i = input.lenght-1; i>=0 ; i--) {
+    const currentElement = input[i]
+  }
+  return result.join("")
 }
