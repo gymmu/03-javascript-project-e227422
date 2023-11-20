@@ -167,14 +167,47 @@ return -1
 }
 export function aufgabe13 (args) {
   const input = args
+  let pos = -1
  
-  for (let i = input.lenght -1; i >= 0; i--) {
+  for (let i = 0; i <  input.length; i++) {
     const currentElement = input[i]
-    res.push(currentElement)
+    
     if (currentElement=== "e"){
-       return i}
+       pos=i}
 
   }
   
-  return resizeBy.join("")
+  return pos
+}
+
+export function aufgabe14 (args) {
+  const input = args
+  const result = []
+
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+
+if (currentElement!== "e") {return -1}
+else if (currentElement==="E") {return -1}
+}
+return 2 
+}
+
+export function aufgabe15 (args) {
+  const input = args
+  const result = []
+  
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+
+  result.push("")
+  
+  if (currentElement === " ") {
+    return result.join("")
+  }
+  
+}
+return result.join("")
 }
