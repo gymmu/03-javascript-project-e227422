@@ -122,7 +122,20 @@ if ( currentElement.charCodeAt === 33 > 64 ) {return true}
 return false
   }
 
+export function aufgabe08 (args) {
+  const input = args
+  const result = []
 
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  
+  if (currentElement==="e"){currentElement=3}
+  
+    return result.join("")
+ 
+  }
+}
 
 export function aufgabe09(args) {
   const input = args
@@ -136,6 +149,23 @@ export function aufgabe09(args) {
  } else {
   return false
  }
+}
+
+export function aufgabe10 (args) {
+  const input = args
+  
+  if(input.lenght!== 7) return false
+   if (input[0] !=="#")  return false
+
+   for (let i = 1; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAT(0)
+    if (48<=ascii && ascii <= 57) {}//macht nichts
+
+    else if (65 <= ascii && ascii <= 70) {}
+    else{ return false}
+   }
+
 }
 
 export function aufgabe11 (args) {
