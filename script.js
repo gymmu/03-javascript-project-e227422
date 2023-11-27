@@ -255,13 +255,14 @@ export function aufgabe16 (args) {
   const input = args
   const result = []
   
+  
   return result.join("")
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
   }
- 
+result.push 
 
 }
 
@@ -280,7 +281,20 @@ export function aufgabe18 (args) {
     
   }
 }
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //es fügt zu jedem Element noch ein gleiches hinzu.
+   result.push ( currentElement+currentElement)
+  }
+
+ 
+  
+  return result.join("")
+}
 
 
 
@@ -297,3 +311,7 @@ export function aufgabe21 (args) {
   }
   return result.join("")
 }
+
+
+
+
