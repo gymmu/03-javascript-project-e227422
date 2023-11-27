@@ -130,11 +130,13 @@ export function aufgabe08 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   
-  if (currentElement==="e"){currentElement=3}
-  
-    return result.join("")
- 
+  if (currentElement==="e") { 
+    result.push("3")
+  }else {
+    result.push(currentElement) 
   }
+}
+return result.join("")
 }
 
 export function aufgabe09(args) {
