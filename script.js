@@ -70,6 +70,7 @@ for (let i = 0; i < input.length; i++)
  { const currentElement = input[i]
 }
 
+
  //es werden die leerschläge gezählt
  if (currentElement === ` `) {
   count = count + 1 
@@ -155,20 +156,26 @@ export function aufgabe09(args) {
 
 export function aufgabe10 (args) {
   const input = args
+  //im Hexcode dürfen nicht mehr als 7 zeichen vorkommen und das erste Element muss ein # sein.
+  if(input.length !== 7) return false
+  if(input[0] !== "#") return false
   
-  if(input.lenght!== 7) return false
-   if (input[0] !=="#")  return false
-
-   for (let i = 1; i < input.length; i++) {
+  //es dürfen nur zahlen und A-F vorkommen
+  for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
-    const ascii = currentElement.charCodeAT(0)
-    if (48<=ascii && ascii <= 57) {}//macht nichts
-
-    else if (65 <= ascii && ascii <= 70) {}
-    else{ return false}
-   }
-
+    const ascii = currentElement.charCodeAt(0)
+    if(48 <= ascii && ascii <= 57){
+      //macht nichts
+    } else if (65 <=ascii && ascii <= 70){
+      //machts nichts
+    }else {
+      return false
+    }
+    
+  }
+return true
 }
+
 
 export function aufgabe11 (args) {
   const input = args
@@ -242,6 +249,20 @@ for (let i = 0; i < input.length; i++) {
   result.push(currentElement)
 }//falls das "if" nicht eintritt, wird das Resultat zurückgegeben.
 return result.join("")
+}
+
+export function aufgabe16 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+ 
+
 }
 
 
