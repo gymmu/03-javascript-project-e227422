@@ -332,16 +332,19 @@ export function aufgabe21 (args) {
 }
 
 
-export function aufgabe (args) {
+export function aufgabe27 (args) {
   const input = args
   const result = []
-  
+  //falls es keine Eingabe hat, wird es direkt zurückgegeben.
+  if (input.length===0){return false}
   for (let i = 0; i < input.length; i++) {
+   
     const currentElement = input[i]
-    
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57){
+ 
   }
-if (currentElement.charCodeAt(0) <)
-
-  return result.join("")
+else  return false
 }
-
+return true
+}
