@@ -266,6 +266,21 @@ result.push
 
 }
 
+export function aufgabe16(args) {
+  const input = args
+  const result = []
+ 
+  for (let i= 0; i < input.length; i++) {
+    const currentElement = input [i];
+    if (currentElement === '$'){
+      break;
+    }
+    result.push(currentElement);
+}
+return result.join('')
+}
+
+
 
 
 export function aufgabe18 (args) {
