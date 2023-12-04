@@ -332,6 +332,27 @@ export function aufgabe21 (args) {
 }
 
 
+export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  }
+  if (currentElement==="k") { 
+    result.push(k)
+
+  }else {
+    result.push(_) 
+  }
+ 
+
+
+  return result.join("")
+}
+
+
+
 export function aufgabe26 (args) {
    
   const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
@@ -374,17 +395,17 @@ export function bubbleSort (args) {
 
   const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
   for (let i = 0; i < list.length - 1; i++) {
-    const currentElement = list[i]
-    const nextElement = list[i+1]
-    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    const currentElement = list[i] //ist die Stelle in der Liste
+    const nextElement = list[i+1] // iat immer das nächste Element
+    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { // wird nach dem asciicode sortiert.
       // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
       const tmp = list[i+1]
-      list[i+1] = list[i]
+      list[i+1] = list[i] //das Element wird in der Liste eins nach hinten verschoben.
       list[i] = tmp
       i = -1 // starte von vorne wenn etwas vertauscht wurde. Immer minus eins damit es ganz nach vorne kommt.
     }
   }
-  const result = list.join("")
-  return (result)
+  const result = list.join("")  // es wird dem Result hinzugefügt
+  return (result) //wird zurückgegeben
  
 }
