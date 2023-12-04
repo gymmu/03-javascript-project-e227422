@@ -258,10 +258,10 @@ export function aufgabe16(args) {
  
   for (let i= 0; i < input.length; i++) {
     const currentElement = input [i];
-    if (currentElement === '$'){
+    if (currentElement === '$'){  //sobald ein $ kommt, wird die Liste unterbrochen.
       break;
     }
-    result.push(currentElement);
+    result.push(currentElement); //die 
 }
 return result.join('')
 }
