@@ -370,7 +370,6 @@ return true
 }
 
 
-
 export function bubbleSort (args) {
 
   const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
@@ -382,7 +381,7 @@ export function bubbleSort (args) {
       const tmp = list[i+1]
       list[i+1] = list[i]
       list[i] = tmp
-      i = 0 // starte von vorne wenn etwas vertauscht wurde.
+      i = -1 // starte von vorne wenn etwas vertauscht wurde. Immer minus eins damit es ganz nach vorne kommt.
     }
   }
   const result = list.join("")
