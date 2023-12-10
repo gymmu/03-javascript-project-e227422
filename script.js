@@ -188,7 +188,7 @@ for (let i = 0; i < input.length; i++) {
   ascii = currentElement.charCodeAt(0) //ascii ist der asciicode des currentElement.
   return ascii // es wird der ascii zurückgegeben.
 }
-return null
+return null //sonst wird null zurückgegeben.
 }
 
 export function aufgabe12 (args) {
@@ -198,29 +198,29 @@ export function aufgabe12 (args) {
     const currentElement = input[i]
 
 
-    if (currentElement === "e") { 
+    if (currentElement === "e") { //wenn das currentElement ein e ist, wird der Standort zurückgegeben.
       return i
   }
 }
 
-return -1
+return -1//sonst -1
 }
 export function aufgabe13 (args) {
   const input = args
-  let pos = -1
+  let pos = -1 //pos startet bei -1
  
   for (let i = 0; i <  input.length; i++) {
     const currentElement = input[i]
     
-    if (currentElement=== "e"){
+    if (currentElement=== "e"){ //wenn das currentElement ein e ist, wird die Positions gespeichert.
        pos=i}
 
   }
   
-  return pos
+  return pos //die position wird zurückgegeben.
 }
 
-export function aufgabe14 (args) {
+export function aufgabe14 (args) { 
   const input = args
   const result = []
 
@@ -228,10 +228,10 @@ export function aufgabe14 (args) {
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
 
-if (currentElement!== "e") {return -1}
-else if (currentElement==="E") {return -1}
+if (currentElement!== "e") {return -1} //wenn das currentElement nicht ein e ist, wird -1 zurückgegeben.
+else if (currentElement==="E") {return -1} //wenn es ein grosses E ist, wird auch -1 zurückgegeben.
 }
-return 2 
+return 2 //sonst wird 2 zurückgegeben.
 }
 
 export function aufgabe15 (args) {
@@ -262,26 +262,22 @@ export function aufgabe16(args) {
     if (currentElement === '$'){  //sobald ein $ kommt, wird die Liste unterbrochen.
       break;
     }
-    result.push(currentElement); //die 
+    result.push(currentElement); // das currentElement wird dem result hinzugefügt.
 }
-return result.join('')
+return result.join('')//das result wird zurückgegeben.
 }
 
 export function aufgabe17(args) {
   const input = args;
-  const result = input.split(',')
+  const result = input.split(',') //das result ist der input der mit einem , getrennt ist.
  
  
-  for (let i = 0; i < result.length - 1; i++) {
-    for (let j = 0; j < result.length - 1 - i; j++) {
-      if (result[j] > result[j + 1]) {
-       
-        [result[j], result[j + 1]] = [result[j + 1], result[j]]
-      }
-    }
-  }
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  
+}
  
-  return result.join(',')
+  return result.join(',') //da result wird zurückgegeben.
 }
 
 
@@ -292,14 +288,14 @@ export function aufgabe18 (args) {
   const input = args
   const result = []
   
-  return result.join("")
-
-
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+   
     
+
   }
+  return result.join("")
 }
 export function aufgabe19 (args) {
   const input = args
@@ -311,8 +307,7 @@ export function aufgabe19 (args) {
    result.push ( currentElement+currentElement)
   }
 
- 
-  
+
   return result.join("")
 }
 
@@ -324,13 +319,13 @@ export function aufgabe20 (args) {
     const currentElement = input[i]
  
   if (currentElement === '.' )  
-  if (input [i+1] === ' ') {
+  if (input [i+1] === ' ') { //wenn nach dem Zeichen Punkt ein Leerschlag kommt, wird true zurückgegeben.
     return true
   }
    
   }
  
-return false
+return false//sonst false
  
  
 }
@@ -344,11 +339,12 @@ export function aufgabe21 (args) {
   const result = []
   
   return result.join("")
-//Das Element wird von umgekehrt durchgelaufen.
+//Das Element wird umgekehrt durchgelaufen.
   for (let i = input.lenght-1; i>=0 ; i--) {
     const currentElement = input[i]
   }
-  return result.join("")
+  result.join(currentElement) //dem result wird das currentElement hinzugefügt.
+  return result
 }
 
 
@@ -359,11 +355,11 @@ export function aufgabe22 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   }
-  if (currentElement==="k") { 
+  if (currentElement==="k") { //wenn das currentElement ein k ist, wird es gelasssen.
     result.push(k)
 
   }else {
-    result.push(_) 
+    result.push(_) //sonst wird aus dem zeichen ein _ gemacht.
   }
  
 
@@ -375,19 +371,20 @@ export function aufgabe22 (args) {
 
 export function aufgabe26 (args) {
    
-  const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
-  for (let i = 0; i < list.length - 1; i++) {
-    const currentElement = list[i]
-    const nextElement = list[i+1]
+const list = args.split("")  // der Text wird in eine Liste umgewandelt.
+  
+
+for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]//ist das jetzige Zeichen.
+    const nextElement = list[i+1] //ist das nächste Zeichen
     if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-      // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
-      const tmp = list[i+1]
-      list[i+1] = list[i]
+      //wenn der ascii code des vorherigen Element grösser ist als das des folgedem,wird es getauscht.
+      const tmp = list[i+1] 
+      list[i+1] = list[i] //das folgende Zeichen wird vorverschoben.
       list[i] = tmp
-      i = 0 // starte von vorne wenn etwas vertauscht wurde.
     }
   }
-  const result = list.join("")
+  const result = list.join("") //die Liste wird zusammengestellt.
   return (result)
  
 }
@@ -399,24 +396,22 @@ export function aufgabe27 (args) {
   //falls es keine Eingabe hat, wird es direkt zurückgegeben.
   if (input.length===0){return false}
   for (let i = 0; i < input.length; i++) {
-   
-    const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
-    if (48 <= ascii && ascii <= 57){
- 
+   const currentElement = input[i]
+
+   const ascii = currentElement.charCodeAt(0)//der ascii ist der asciicode des currentElement.
+    if (48 <= ascii && ascii <= 57){ //wenn der asciicode zwischen 48 und 57 liegt, wird true zurückgegeben.
+      return true
   }
-else  return false
-}
-return true
+} return false
 }
 
 
 export function bubbleSort (args) {
 
-  const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+  const list = args.split("")  //Text wird in eine Liste umgewandelt.
   for (let i = 0; i < list.length - 1; i++) {
     const currentElement = list[i] //ist die Stelle in der Liste
-    const nextElement = list[i+1] // iat immer das nächste Element
+    const nextElement = list[i+1] // ist immer das nächste Element
     if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { // wird nach dem asciicode sortiert.
       // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
       const tmp = list[i+1]
@@ -427,5 +422,5 @@ export function bubbleSort (args) {
   }
   const result = list.join("")  // es wird dem Result hinzugefügt
   return (result) //wird zurückgegeben
- 
+
 }
