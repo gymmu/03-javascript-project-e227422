@@ -1,21 +1,21 @@
 export function aufgabe01(args) {
   const input = args
-  const result = []
+  const result = [] // es wurde Result erstellt und es hat bis jetzt keinen Inhalt.
 
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+  for (let i = 0; i < input.length; i++) { //es lauft einen Buchstaben nach dem anderen durch.
+    const currentElement = input[i] //das currentElement ist nur das ein einzelnes Zeiches des Inputes. i ist der Standort.
 
-if(currentElement === 'e') {
+if(currentElement === 'e') { //falls das currentElement ein e ist, wird nichts dem result hinzugefügt.
   result.push("")
 }else if ( currentElement === 'E') {
-    result.push("") 
+    result.push("") //Das gleiche mit dem E.
   
 }else {
-  result.push(currentElement)
+  result.push(currentElement) // wenn beide Fälle nicht eintreffen, wird dem result einfach das currentElement hinzugefügt.
 }
 }
 
-  return result.join("")
+  return result.join("") //das result wird zurückgegeben.
 }
 
 
@@ -26,11 +26,11 @@ export function aufgabe02(args) {
 
 for (let i = 0; i < input.length; i++) {
 const currentElement = input[i]
-//Die Buchstaben werden der Reihen nach überprüft.
+//Die Buchstaben werden der Reihe nach überprüft.
 const capitalizedElement = currentElement.toUpperCase()
-
+//die Konstante capitalizedElement schreibt das currentElement gross.
 result.push(capitalizedElement)
-//die Ergebnisse werden zusammengefügt.
+//das result wird zusammengefügt und besteht aus aus dem capitalizedElement.
 }
 //Das Ergebniss wird zurückgegeben.
 return result.join("")
@@ -41,21 +41,21 @@ export function aufgabe03(args) {
   const input = args
   const result = []
 let count = 0
-//prüft ob ein e enhalten ist.
+//der Zähler wird auf 0 gestellt.
 
 for (let i = 0; i < input.length; i++) {
 const currentElement = input[i]
-
+//die Zeichen werden der Reihe nach durchgelaufen.
 
 if ( currentElement===`e`)
 count = count + 1 
-
+// wenn das currentElement ein e ist, wird zum Zähler eins hinzugefügt.
 if(currentElement===`E`)
-count = count + 1 
+count = count + 1  //das gleiche mit dem dem E.
 
 
 }
-return count
+return count // es wird die Zahl des Zählers zurückgegeben.
 }
 
 
@@ -65,7 +65,7 @@ export function aufgabe04 (args) {
   //den counter auf 0 setzen.
   let count = 0
   
-
+//die Zeichen werden eins nach dem anderem überprüft.
 for (let i = 0; i < input.length; i++) 
  { const currentElement = input[i]
 }
@@ -75,8 +75,8 @@ for (let i = 0; i < input.length; i++)
  if (currentElement === ` `) {
   count = count + 1 
 }
-
-return count
+//das gezählte wird zurückgegeben.
+return count
 }
 
 
@@ -89,7 +89,7 @@ let capitalLetters = 0
 
 for (let i = 0; i < input.length; i++) {
 const currentElement = input[i]
-//prüft ob ein Grossbuchstabe enhalten ist.
+//wenn das currentElement ein Punkt oder ein Leerschlag ist, passiert nichts.
 if (currentElement=== ".") {}
 else if (currentElement===" "){}
 //falls das Element gleich ist, wie das grossgeschriebene Element, rechnet es plus 1.
@@ -99,9 +99,9 @@ else if (currentElement === currentElement.toUpperCase()) {
 
 }
 
-if (capitalLetters > 0) {
-  return true
-} else { return false}
+if (capitalLetters > 0) {//falls es mehr als 0 Grossbuchstaben hat, wird true zurückgegeben.
+  return true  
+} else { return false}//sonst false
  
 }
 
@@ -117,10 +117,10 @@ export function aufgabe06(args) {
     const currentElement = input[i]
   }
 
-if ( currentElement.charCodeAt === 33 > 64 ) {return true}
+if ( currentElement.charCodeAt === 33 > 64 ) {return true} //wenn der asciicode des currentElement zwischen 33 und 64 liegt, wird true zurückgegeben.
  
 
-return false
+return false //sonst wird false zurückgegeben.
   }
 
 export function aufgabe08 (args) {
@@ -131,26 +131,26 @@ export function aufgabe08 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   
-  if (currentElement==="e") { 
+  if (currentElement==="e") {  //falls das currentElement ein e ist, wird ein 3 anstelle des e hinzugefügt.
     result.push("3")
   }else {
-    result.push(currentElement) 
+    result.push(currentElement)  //sonst wird das currentElement hinzugefügt.
   }
 }
-return result.join("")
+return result.join("") //wird zurückgegeben
 }
 
 export function aufgabe09(args) {
   const input = args
-  let len = 0
+  let len = 0 //Zähler wird auf Null gestellt und len genannt.
   for (let i = 0; i < input.length; i++) {
   len++
-  }
+  } //es wird immer plus eins gerechnet.
 
  if (len === 6) {
-  return true
+  return true //wenn die Länge 6 ist, wird true zurückgegeben.
  } else {
-  return false
+  return false//sonst false
  }
 }
 
@@ -159,33 +159,34 @@ export function aufgabe10 (args) {
   //im Hexcode dürfen nicht mehr als 7 zeichen vorkommen und das erste Element muss ein # sein.
   if(input.length !== 7) return false
   if(input[0] !== "#") return false
+  //wenn diese Fälle eintreffen, wird das Element sofort zurückgegeben.
   
   //es dürfen nur zahlen und A-F vorkommen
   for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
-    if(48 <= ascii && ascii <= 57){
+    const ascii = currentElement.charCodeAt(0) //constascii ist der ascii code des currentElement.
+    if(48 <= ascii && ascii <= 57){ //wenn der ascii code zwischen 48 und 57 liegt, passiert nichts.
       //macht nichts
     } else if (65 <=ascii && ascii <= 70){
-      //machts nichts
+      //macht nichts
     }else {
-      return false
+      return false //es wird false zurückgegeben
     }
     
   }
-return true
+return true //sonst wird true zurückgegeben.
 }
 
 
 export function aufgabe11 (args) {
   const input = args
-  let ascii = null
+  let ascii = null //ascii ist im Moment null.
 if (input.length > 1){ return null} //funtktionswächter
 
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
-  ascii = currentElement.charCodeAt(0)
-  return ascii
+  ascii = currentElement.charCodeAt(0) //ascii ist der asciicode des currentElement.
+  return ascii // es wird der ascii zurückgegeben.
 }
 return null
 }
