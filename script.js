@@ -127,6 +127,23 @@ else {return true} //sonst wird richtig zurückgegeben
   return false//gibt false zurück.
   }
 
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+ 
+  for (let i = 0 ; i < input.length; i++) {
+    const currentElement =input[i]
+if (currentElement === "u") {//wenn das currentElement ein u ist, wird geprüft, ob das nächste zeichen ein n ist.
+  if(input[i+1]=== "n") {
+    if(input[i+2]=== "d") {//wenn das übernächste ein d ist, wird true zurückgegeben.
+    return true
+  }
+}
+}
+  }
+  return false//sonst wird false zurückgegeben
+}
+
 
 
 export function aufgabe08 (args) {
