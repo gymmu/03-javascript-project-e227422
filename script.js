@@ -109,19 +109,25 @@ if (capitalLetters > 0) {//falls es mehr als 0 Grossbuchstaben hat, wird true zu
 
 
 
-export function aufgabe06(args) {
+export function aufgabe06 (args) {
   const input = args
-  const result = []
-
-  for (let i = 0; i < input.length; i++) {
+   
+  for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0) //der asciicode des currentElement.
+
+
+if (48 <= ascii && ascii <= 57){}//passiert nichts
+
+else if (65 <= ascii && ascii <= 90) {} //passiert nichts
+else if (97 <= ascii && ascii <= 122) {}//passiert nichts
+else if (currentElement === " ") {} //passiert nichts
+else {return true} //sonst wird richtig zurückgegeben
+  }
+  return false//gibt false zurück.
   }
 
-if ( currentElement.charCodeAt === 33 > 64 ) {return true} //wenn der asciicode des currentElement zwischen 33 und 64 liegt, wird true zurückgegeben.
- 
 
-return false //sonst wird false zurückgegeben.
-  }
 
 export function aufgabe08 (args) {
   const input = args
