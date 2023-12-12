@@ -307,18 +307,6 @@ for (let i = 0; i < input.length; i++) {
 
 
 
-export function aufgabe18 (args) {
-  const input = args
-  const result = []
-  
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-   
-    
-
-  }
-  return result.join("")
-}
 
 
 export function aufgabe19 (args) {
@@ -395,24 +383,25 @@ export function aufgabe25 (args) {
   const input = args
   const result = []
 
-  if (input.length % 2 === 0){//prüft ob die Eingabe gerade ist.
- const pos= input.length/2
+  if (input.length % 2 === 0){//prüft ob die input.length gerade ist.
+ const pos= input.length/2 //um die Hälfte zu erhalten.
 
  for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
+
   if (i===pos || i === pos - 1){} //macht nichts, minus eins damit es richtig ist.
   else {
-    result.push(currentElement)
+    result.push(currentElement)//fügt das currentElement hinzu
   }
  }
   }
-else {
-  const pos= Math.floor(input.length / 2)
+else { //die Zahl ist gerade.
+  const pos= Math.floor(input.length / 2)//zahl wird halbiert und abgerundet.
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (i===pos) {}
-else {result.push(currentElement)
+    if (i===pos) {}//wenn es die Mitte ist, wird es nicht hinzugefügt.
+else {result.push(currentElement)//sonst schon.
   }
   }
 }
