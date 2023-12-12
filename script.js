@@ -313,12 +313,11 @@ export function aufgabe18 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
  
-    if (currentElement === ' ') {
-      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+ if (currentElement === ' ') {// Der Satz wird als als phrases hinzugefügt.
       phrases.push(currentPhrase.join(""))
-      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+      currentPhrase = []  // Es wird alles was man drin hat gelöscht.
     } else {
-      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      // Wenn es keinen '.' gibt, wird es an den Satz angefhängt.
       currentPhrase.push(currentElement)
     }
   }
