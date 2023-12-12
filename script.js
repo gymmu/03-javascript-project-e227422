@@ -311,7 +311,6 @@ export function aufgabe18 (args) {
   const input = args
   const result = []
   
-
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
    
@@ -320,6 +319,8 @@ export function aufgabe18 (args) {
   }
   return result.join("")
 }
+
+
 export function aufgabe19 (args) {
   const input = args
   const result = []
@@ -390,6 +391,35 @@ export function aufgabe22 (args) {
   return result.join("")
 }
 
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+
+  if (input.length % 2 === 0){//prüft ob die Eingabe gerade ist.
+ const pos= input.length/2
+
+ for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  if (i===pos || i === pos - 1){} //macht nichts, minus eins damit es richtig ist.
+  else {
+    result.push(currentElement)
+  }
+ }
+  }
+else {
+  const pos= Math.floor(input.length / 2)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i===pos) {}
+else {result.push(currentElement)
+  }
+  }
+}
+
+  return result.join("")
+}
+
 
 
 export function aufgabe26 (args) {
@@ -427,6 +457,23 @@ export function aufgabe27 (args) {
   }
 } return false
 }
+
+
+export function  aufgabe28 (args) {
+  const input = args
+  const zahlen = input.split(' ')
+ 
+  if (zahlen.length === 2 && !isNaN(zahlen[0]) && !isNaN(zahlen[1])) {
+    const zahl1 = parseFloat(zahlen[0]);
+    const zahl2 = parseFloat(zahlen[1]);
+   
+    const summe = zahl1 + zahl2;
+    return `${summe}`;
+} else {
+    return null
+}
+}
+ 
 
 
 export function bubbleSort (args) {
