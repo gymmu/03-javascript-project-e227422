@@ -387,17 +387,17 @@ const input = args
 const result = []
 let firstPart = true
  
-for (let i = 0; i < input.length; i++) {
+for (let i = 0; i < input.length; i++) {//die Zeichen der Reihe nach durchgehen
   const currentElement = input[i]
  
   if (firstPart === true) {
-    result.push("_")
+    result.push("_")//es wird ein _ hinzugefügt.
   } else {
-    result.push(currentElement)
+    result.push(currentElement)//sonst wird das currentElement hinzugefügt.
   }
  
  
-  if (currentElement === 'k') {
+  if (currentElement === 'k') {//wenn das currentElement ein k ist, ist firstPart falsch.
     firstPart = false
   }
  
