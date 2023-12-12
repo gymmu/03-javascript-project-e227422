@@ -410,17 +410,17 @@ export function aufgabe24 (args) {
   const result = []
 
   if (input.length === 1) return input
-  const firstElem=input[0]
-  const lastElem=input[input.length-1]
+  const firstElem=input[0] //erstes zeichen
+  const lastElem=input[input.length-1]//letztes zeichen
 
-  result.push(lastElem)
-  for (let i = 1; i < input.length -1; i++) {
+  result.push(lastElem)//zuerst muss man das letzte Zeichen hinzufügen.
+  for (let i = 1; i < input.length -1; i++) {//es fängt beim zweiten Zeichen an und hört beim zweitletzten auf.
     const currentElement = input[i]
-    result.push(currentElement)
+    result.push(currentElement)//alle andere Zeichen werden hinzugefügt.
   }
 
-result.push(firstElem)
-  return result.join("")
+result.push(firstElem)//das erste Zeichen wird am Schluss hinzugefügt.
+  return result.join("")//das result wird zurückgegeben.
 }
 
 export function aufgabe25 (args) {
