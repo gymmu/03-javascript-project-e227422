@@ -382,21 +382,44 @@ export function aufgabe21 (args) {
 
 
 export function aufgabe22 (args) {
-  const input = args
-  const result = []
-  
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-  }
-  if (currentElement==="k") { //wenn das currentElement ein k ist, wird es gelasssen.
-    result.push(k)
-
-  }else {
-    result.push(_) //sonst wird aus dem zeichen ein _ gemacht.
+ 
+const input = args
+const result = []
+let firstPart = true
+ 
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+ 
+  if (firstPart === true) {
+    result.push("_")
+  } else {
+    result.push(currentElement)
   }
  
+ 
+  if (currentElement === 'k') {
+    firstPart = false
+  }
+ 
+}
+return result.join("")
+}
 
+export function aufgabe24 (args) {
+  const input = args
+  const result = []
 
+  if (input.length === 1) return input
+  const firstElem=input[0]
+  const lastElem=input[input.length-1]
+
+  result.push(lastElem)
+  for (let i = 1; i < input.length -1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+result.push(firstElem)
   return result.join("")
 }
 
