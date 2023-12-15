@@ -365,19 +365,16 @@ return false//sonst false
 
 
 
-
-
 export function aufgabe21 (args) {
   const input = args
   const result = []
-  
+ 
+for (let i = input.length -1; i>=0; i--) {//lauft die Eingabe von hinten durch.
+  const currentElement = input[i]
+  result.push(currentElement)//fügt immer das cuurentElement hinzu.
+ 
+}
   return result.join("")
-//Das Element wird umgekehrt durchgelaufen.
-  for (let i = input.lenght-1; i>=0 ; i--) {
-    const currentElement = input[i]
-  }
-  result.join(currentElement) //dem result wird das currentElement hinzugefügt.
-  return result
 }
 
 
@@ -505,13 +502,15 @@ export function aufgabe27 (args) {
   //falls es keine Eingabe hat, wird es direkt zurückgegeben.
   if (input.length===0){return false}
   for (let i = 0; i < input.length; i++) {
-   const currentElement = input[i]
-
-   const ascii = currentElement.charCodeAt(0)//der ascii ist der asciicode des currentElement.
-    if (48 <= ascii && ascii <= 57){ //wenn der asciicode zwischen 48 und 57 liegt, wird true zurückgegeben.
-      return true
+   
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57){
+ 
   }
-} return false
+else  return false
+}
+return true
 }
 
 
